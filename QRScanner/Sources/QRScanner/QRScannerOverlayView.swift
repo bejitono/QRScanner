@@ -1,12 +1,10 @@
 //
 //  QRScannerOverlayView.swift
-//  PHWallet
+//  QRScanner
 //
-//  Created by Stefano De Micheli on 17/3/21.
-//  Copyright © 2021 OPN Tech Co., Ltd. All rights reserved.
+//  Created by Stefano on 17/4/21.
 //
 
-import PHUIKit
 import UIKit
 
 protocol QRScannerOverlayViewDelegate: AnyObject {
@@ -131,7 +129,7 @@ private extension QRScannerOverlayView {
             alignLabel.centerXAnchor.constraint(equalTo: boxFrameView.centerXAnchor)
         ])
         
-        alignLabel.font = Theme.font.headline4
+        alignLabel.font = UIFont.systemFont(ofSize: 24)
         alignLabel.textColor = .white
         alignLabel.numberOfLines = 2
         alignLabel.textAlignment = .center
@@ -145,7 +143,7 @@ private extension QRScannerOverlayView {
             backButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: .topMargin)
         ])
 
-        backButton.setImage(Image.cameraBackArrow()?.withRenderingMode(.alwaysTemplate), for: .normal)
+        backButton.setImage(UIImage(named: "chevron.backward")?.withRenderingMode(.alwaysTemplate), for: .normal)
         backButton.tintColor = .white
         backButton.addTarget(self, action: #selector(backPressed), for: .touchUpInside)
     }
@@ -159,7 +157,7 @@ private extension QRScannerOverlayView {
             flashButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: .topMargin)
         ])
         
-        flashButton.setImage(Image.flash()?.withRenderingMode(.alwaysTemplate), for: .normal)
+        flashButton.setImage(UIImage(named: "flashlight.off.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
         flashButton.tintColor = .white
         flashButton.addTarget(self, action: #selector(flashPressed), for: .touchUpInside)
     }
