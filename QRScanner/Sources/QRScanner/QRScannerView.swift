@@ -1,9 +1,8 @@
 //
 //  QRScannerView.swift
-//  PHWallet
+//  QRScanner
 //
-//  Created by Stefano De Micheli on 17/3/21.
-//  Copyright © 2021 OPN Tech Co., Ltd. All rights reserved.
+//  Created by Stefano on 17/4/21.
 //
 
 import UIKit
